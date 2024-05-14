@@ -38,7 +38,7 @@
 # auth_number : VARCHAR(4) NN UQ FK email_auth_number(email)
 # user_gender : VARCHAR(10) NN UQ FK email_auth_number(email)
 # user_age : VARCHAR(10) NN UQ FK email_auth_number(email)
-# customer_role : VARCHAR(15) NN DEFAULT('ROLE_USER') CHECK('ROLE_USER', 'ROLE_ADMIN')
+# role : VARCHAR(10) NN DEFAULT('ROLE_USER') CHECK('ROLE_USER', 'ROLE_ADMIN')
 # join_path : VARCHAR(5) NN DEFAULT('HOME') CHECK('HOME', 'KAKAO', 'NAVER')
 #
 # - 이메일 인증번호 (이메일*, 인증번호)
