@@ -36,7 +36,7 @@
 # user_password : VARCHAR(255) NN
 # user_email : VARCHAR(50) NN UQ FK email_auth_number(email)
 # auth_number : VARCHAR(4) NN UQ FK email_auth_number(email)
-# user_gender : VARCHAR(100) NN UQ FK email_auth_number(email)
+# user_gender : VARCHAR(10) NN UQ FK email_auth_number(email)
 # user_age : VARCHAR(100) NN UQ FK email_auth_number(email)
 # customer_role : VARCHAR(15) NN DEFAULT('ROLE_USER') CHECK('ROLE_USER', 'ROLE_ADMIN')
 # join_path : VARCHAR(5) NN DEFAULT('HOME') CHECK('HOME', 'KAKAO', 'NAVER')
