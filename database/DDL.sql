@@ -20,24 +20,24 @@
 # - Q&A 게시물 (접수번호*, 제목, 내용, 작성자, 작성일, 조회수)
 
 # Relationship
-# 고객 - 이메일 인증번호 : 이메일 인증번호 테이블에 등록된 이메일만 사용자의 이메일로 사용할 수 있음 (1 : 1)
-# 디자이너 - 이메일 인증번호 : 이메일 인증번호 테이블에 등록된 이메일만 사용자의 이메일로 사용할 수 있음 (1 : 1)
-# 관리자 - 이메일 인증번호 : 이메일 인증번호 테이블에 등록된 이메일만 사용자의 이메일로 사용할 수 있음 (1 : 1)
+# 유저 - 이메일 인증번호 : 이메일 인증번호 테이블에 등록된 이메일만 사용자의 이메일로 사용할 수 있음 (1 : 1)
 
-# 관리자 - 공지사항 게시물 : 사용자가 게시물을 작성할 수 있음 (1 : n)
-# 관리자 - 트렌드 게시물 : 사용자가 게시물을 작성할 수 있음 (1 : n)
-# 관리자 - Q&A 게시물 : 사용자가 게시물을 작성할 수 있음 (1 : n)
-# 고객 - 고객 게시물 : 사용자가 게시물을 작성할 수 있음 (1 : n)
-# 디자이너 - 디자이너 게시물 : 사용자가 게시물을 작성할 수 있음 (1 : n)
+# 유저 - 공지사항 게시물 : 유저 이면서 관리자 권한을 가진 사람이 게시물을 작성할 수 있음 (1 : n)
+# 유저 - 트렌드 게시물 : 유저 이면서 관리자 권한을 가진 사람이 게시물을 작성할 수 있음 (1 : n)
+# 유저 - Q&A 게시물 : 유저 이면서 관리자 권한을 가진 사람이 게시물을 작성할 수 있음 (1 : n)
+# 유저 - 고객 게시물 : 유저 이면서 고객 권한을 가진 사람이 게시물을 작성할 수 있음 (1 : n)
+# 유저 - 디자이너 게시물 : 유저 이면서 디자이너 권한을 가진 사람이 게시물을 작성할 수 있음 (1 : n)
+# 유저 - 채팅방: 유저 이면서 고객 이거나 디자이너 권한을 가진 사람이 게시물을 작성할 수 있음 (1 : n)
+
 #
 # # - 사용자 (아이디*, 비밀번호, 이메일, 권한, 가입경로)
-# table name : customer
-# customer_id : VARCHAR(50) PK
-# customer_password : VARCHAR(255) NN
-# customer_email : VARCHAR(100) NN UQ FK email_auth_number(email)
-# customer_
-# customer_
-# customer_
+# table name : user
+# user_id : VARCHAR(50) PK
+# user_password : VARCHAR(255) NN
+# user_email : VARCHAR(100) NN UQ FK email_auth_number(email)
+# auth_number : VARCHAR(100) NN UQ FK email_auth_number(email)
+# user_gender : VARCHAR(100) NN UQ FK email_auth_number(email)
+# user_age : VARCHAR(100) NN UQ FK email_auth_number(email)
 # customer_role : VARCHAR(15) NN DEFAULT('ROLE_USER') CHECK('ROLE_USER', 'ROLE_ADMIN')
 # join_path : VARCHAR(5) NN DEFAULT('HOME') CHECK('HOME', 'KAKAO', 'NAVER')
 #
