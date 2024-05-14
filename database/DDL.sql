@@ -34,7 +34,7 @@
 # table name : user
 # user_id : VARCHAR(20) PK
 # user_password : VARCHAR(255) NN
-# user_email : VARCHAR(100) NN UQ FK email_auth_number(email)
+# user_email : VARCHAR(50) NN UQ FK email_auth_number(email)
 # auth_number : VARCHAR(100) NN UQ FK email_auth_number(email)
 # user_gender : VARCHAR(100) NN UQ FK email_auth_number(email)
 # user_age : VARCHAR(100) NN UQ FK email_auth_number(email)
