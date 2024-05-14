@@ -32,7 +32,7 @@
 
 # # - 사용자 (아이디*, 비밀번호, 이메일, 성별, 연령대, 업체명, 면허증사진 권한, 가입경로)
 # table name : user
-# user_id : VARCHAR(50) PK
+# user_id : VARCHAR(20) PK
 # user_password : VARCHAR(255) NN
 # user_email : VARCHAR(100) NN UQ FK email_auth_number(email)
 # auth_number : VARCHAR(100) NN UQ FK email_auth_number(email)
